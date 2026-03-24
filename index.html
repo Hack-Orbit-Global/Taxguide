@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TaxGuide — Smart Indian Tax Assistant. Compare Old vs New Regime, find legal deductions, pay less. Fully private, runs in your browser." />
+  <meta name="theme-color" content="#080c14" />
+  <title>TaxGuide — Smart Indian Tax Assistant</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="logo" aria-label="TaxGuide Home">
+        <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="16" cy="16" r="6" fill="currentColor" opacity="0.15"/>
+          <circle cx="16" cy="16" r="2.5" fill="currentColor"/>
+          <ellipse cx="16" cy="16" rx="14" ry="5.5" stroke="currentColor" stroke-width="1.2" opacity="0.5" transform="rotate(-30 16 16)"/>
+          <circle cx="27" cy="12" r="1.8" fill="currentColor"/>
+        </svg>
+        <span class="logo-text">TaxGuide</span>
+      </a>
+      <div class="nav-links">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#chat-section" class="nav-link nav-cta" id="nav-cta-btn">Calculate Tax →</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="home">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <span class="flag">🇮🇳</span>
+          <span>Designed for the Indian Tax System · March 2026</span>
+        </div>
+        <h1 class="hero-title">
+          Stop guessing.<br />
+          <span class="accent-text">Pay the right tax.</span>
+        </h1>
+        <p class="hero-sub">
+          A conversational tax assistant that compares Old vs New regime,
+          finds your legal deductions, and tells you exactly how much you
+          can save — in under two minutes.
+        </p>
+        <div class="hero-trust">
+          <span class="trust-item">
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M8 1L10 6H15L11 9.5L12.5 15L8 12L3.5 15L5 9.5L1 6H6L8 1Z" fill="currentColor"/></svg>
+            No PAN · No Aadhaar · No bank data
+          </span>
+          <span class="trust-divider">·</span>
+          <span class="trust-item">Runs entirely in your browser</span>
+          <span class="trust-divider">·</span>
+          <span class="trust-item">100% free</span>
+        </div>
+        <div class="hero-actions">
+          <button class="btn-primary" id="start-btn">
+            Start Calculating
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <!-- Orbital SVG graphic -->
+        <svg class="orbital-svg" viewBox="0 0 380 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Outer orbit ring -->
+          <ellipse cx="190" cy="190" rx="165" ry="165" stroke="#1e2d4d" stroke-width="1"/>
+          <!-- Middle orbit ring -->
+          <ellipse cx="190" cy="190" rx="115" ry="115" stroke="#1e2d4d" stroke-width="1" stroke-dasharray="4 6"/>
+          <!-- Inner orbit ring -->
+          <ellipse cx="190" cy="190" rx="68" ry="68" stroke="#1e2d4d" stroke-width="1"/>
+          <!-- Centre glow -->
+          <circle cx="190" cy="190" r="32" fill="#0f1a30"/>
+          <circle cx="190" cy="190" r="22" fill="#142040"/>
+          <circle cx="190" cy="190" r="10" fill="#3b82f6" opacity="0.8"/>
+          <!-- ₹ symbol in center -->
+          <text x="190" y="195" text-anchor="middle" fill="#e2e8f0" font-size="14" font-weight="600" font-family="system-ui">₹</text>
+          <!-- Orbiting dots - outer -->
+          <circle class="orbit-dot-1" cx="355" cy="190" r="6" fill="#3b82f6"/>
+          <circle class="orbit-dot-2" cx="25" cy="190" r="4" fill="#3b82f6" opacity="0.5"/>
+          <!-- Orbiting dots - middle -->
+          <circle class="orbit-dot-3" cx="305" cy="190" r="5" fill="#f59e0b"/>
+          <circle class="orbit-dot-4" cx="75" cy="190" r="3.5" fill="#f59e0b" opacity="0.4"/>
+          <!-- Percentage labels -->
+          <text x="285" y="85" fill="#475569" font-size="11" font-family="system-ui">Old Regime</text>
+          <text x="95" y="295" fill="#475569" font-size="11" font-family="system-ui">New Regime</text>
+          <!-- Connecting lines (decorative) -->
+          <line x1="190" y1="25" x2="190" y2="50" stroke="#1e2d4d" stroke-width="1" stroke-dasharray="3 4"/>
+          <line x1="190" y1="330" x2="190" y2="355" stroke="#1e2d4d" stroke-width="1" stroke-dasharray="3 4"/>
+        </svg>
+        <!-- Floating stat cards -->
+        <div class="float-card float-card-1">
+          <span class="float-label">New Regime Tax</span>
+          <span class="float-value accent-text">₹78,000</span>
+        </div>
+        <div class="float-card float-card-2">
+          <span class="float-label">You Save</span>
+          <span class="float-value success-text">₹24,700</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats bar -->
+    <div class="stats-bar">
+      <div class="stat-item">
+        <span class="stat-num">2</span>
+        <span class="stat-desc">Regimes compared</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num">0</span>
+        <span class="stat-desc">Data points stored</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num">100%</span>
+        <span class="stat-desc">Client-side</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <span class="stat-num">FY 26</span>
+        <span class="stat-desc">Tax rules</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CHAT SECTION ===================== -->
+  <section class="chat-section" id="chat-section">
+    <div class="section-header">
+      <div class="section-tag">Tax Calculator</div>
+      <h2 class="section-title">Your personal tax walkthrough</h2>
+      <p class="section-sub">Answer a few questions. Get a complete breakdown in seconds.</p>
+    </div>
+
+    <div class="chat-wrap">
+      <!-- Consent notice -->
+      <div class="consent-notice" id="consent-notice">
+        <div class="consent-icon">🔒</div>
+        <div class="consent-text">
+          <strong>Before we begin</strong>
+          <p>This tool collects no personal data. All calculations happen on your device. No PAN, Aadhaar, or bank details are needed.</p>
+          <p class="consent-legal">By continuing, you acknowledge this is for educational purposes only and not professional tax advice.</p>
+        </div>
+        <button class="consent-btn" id="consent-btn">I Agree &amp; Continue →</button>
+      </div>
+
+      <!-- Chat interface (hidden until consent) -->
+      <div class="chat-container" id="chat-container" aria-live="polite" aria-label="Tax assistant conversation">
+        <div class="chat-top-bar">
+          <div class="chat-agent">
+            <span class="agent-dot"></span>
+            <span class="agent-name">TaxGuide Assistant</span>
+          </div>
+          <div class="chat-meta-info">Secure · Local · Free</div>
+        </div>
+
+        <div class="chat-messages" id="chat-messages" role="log">
+          <!-- Messages injected by script.js -->
+        </div>
+
+        <div class="chat-input-area" id="chat-input-area">
+          <!-- Dynamic inputs injected by script.js -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT / MANIFESTO ===================== -->
+  <section class="about-section" id="about">
+    <div class="about-inner">
+
+      <div class="manifesto-block">
+        <div class="section-tag">Our Manifesto</div>
+        <h2 class="section-title">Built in public.<br />Built together.</h2>
+        <div class="manifesto-text">
+          <p>
+            <strong>Hack Orbit</strong> exists because the best way to learn is to ship real things
+            with real people. We are a global, open-source developer community where
+            collaboration, building, and learning happen in public — every single day.
+          </p>
+          <p>
+            We believe in making tools that are genuinely useful, genuinely free, and
+            genuinely transparent. TaxGuide is a product of that belief — no accounts,
+            no data collection, no paywalls. Just a tool that helps you understand your
+            taxes without needing to hire a CA or sit through hours of confusing spreadsheets.
+          </p>
+          <p>
+            We are not a startup. We are not a company. We are a community of builders
+            who care about open software, accessible knowledge, and shipping things that matter.
+          </p>
+          <p class="manifesto-callout">
+            "Build in Public. Build Together. Orbit the impossible."
+          </p>
+        </div>
+        <div class="manifesto-links">
+          <a href="https://github.com/Hack-Orbit-Global/" target="_blank" rel="noopener" class="manifesto-link">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+            Hack Orbit on GitHub
+          </a>
+          <a href="https://github.com/bariksabarna" target="_blank" rel="noopener" class="manifesto-link">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+            Built by Sabarna Barik
+          </a>
+        </div>
+      </div>
+
+      <div class="founder-card">
+        <div class="founder-avatar">SB</div>
+        <div class="founder-info">
+          <h3 class="founder-name">Sabarna Barik</h3>
+          <p class="founder-title">Founder, Hack Orbit</p>
+          <p class="founder-desc">
+            Developer · Builder · Open Source contributor. Started Hack Orbit to build a
+            community where developers ship real products, learn in public, and grow together.
+          </p>
+          <a href="https://github.com/bariksabarna" target="_blank" rel="noopener" class="founder-link">
+            github.com/bariksabarna →
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== LEGAL DISCLAIMER ===================== -->
+  <div class="disclaimer-strip">
+    <div class="disclaimer-inner">
+      <span class="disclaimer-icon">⚖️</span>
+      <p>
+        <strong>Disclaimer:</strong> TaxGuide provides educational tax guidance based on Indian tax laws (FY 2025–26).
+        It does not constitute financial, legal, or professional tax advice. Tax rules are subject to change.
+        This tool promotes legal tax saving — not tax evasion. Last updated: March 2026.
+        For official tax filing, consult a qualified Chartered Accountant.
+      </p>
+    </div>
+  </div>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+        <a href="#" class="logo footer-logo">
+          <svg class="logo-icon" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="16" cy="16" r="14" stroke="currentColor" stroke-width="1.5"/>
+            <circle cx="16" cy="16" r="2.5" fill="currentColor"/>
+            <ellipse cx="16" cy="16" rx="14" ry="5.5" stroke="currentColor" stroke-width="1.2" opacity="0.5" transform="rotate(-30 16 16)"/>
+            <circle cx="27" cy="12" r="1.8" fill="currentColor"/>
+          </svg>
+          <span class="logo-text">TaxGuide</span>
+        </a>
+        <p class="footer-tagline">Smart Indian Tax Assistant · Open Source · Free Forever</p>
+      </div>
+      <div class="footer-divider"></div>
+      <div class="footer-bottom">
+        <span>Built under <a href="http://github.com/Hack-Orbit-Global/" target="_blank" rel="noopener">Hack Orbit</a> by <a href="https://github.com/bariksabarna" target="_blank" rel="noopener">Sabarna Barik</a></span>
+        <span class="footer-right">
+          <span>🇮🇳 India · FY 2025–26</span>
+          <span class="footer-dot">·</span>
+          <span>Open Source</span>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
